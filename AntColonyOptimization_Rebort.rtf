@@ -1,0 +1,467 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red155\green0\blue211;\red0\green176\blue80;\red0\green77\blue187;\red0\green0\blue0;\red255\green0\blue0;\red128\green100\blue162;\red247\green150\blue70;\red0\green0\blue255;\red189\green192\blue191;\red0\green255\blue255;\red220\green220\blue220;\red245\green245\blue245;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}}
+{\*\generator Riched20 10.0.17763}\viewkind4\uc1 
+\pard\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\qc\cf1\charscalex100\b\f0\fs76 Selected Topics in AI-2 \par
+\cf2\b0\fs50 Assignment 3 - Task 2 Report\par
+\cf3\b\fs40 (Ant Colony Optimization (ACO) )\par
+
+\pard\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\cf4\b0\fs28\par
+\par
+\par
+\par
+\trowd\trgaph10\trleft28\trrh337\trbrdrl\brdrs\brdrw5\brdrcf4 \trbrdrt\brdrs\brdrw5\brdrcf4 \trbrdrr\brdrs\brdrw5\brdrcf4 \trbrdrb\brdrs\brdrw5\brdrcf4 \trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clcbpat9\clbrdrl\brdrw5\brdrs\brdrcf4\clbrdrt\brdrw5\brdrs\brdrcf4\clbrdrr\brdrw5\brdrs\brdrcf4\clbrdrb\brdrw15\brdrs\brdrcf4 \cellx4843\clcbpat9\clbrdrl\brdrw5\brdrs\brdrcf4\clbrdrt\brdrw5\brdrs\brdrcf4\clbrdrr\brdrw5\brdrs\brdrcf4\clbrdrb\brdrw15\brdrs\brdrcf4 \cellx9658 
+\pard\intbl\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\qc\b\fs26 Name\cell ID's\cell\row\trowd\trgaph10\trleft28\trrh337\trbrdrl\brdrs\brdrw5\brdrcf4 \trbrdrt\brdrs\brdrw5\brdrcf4 \trbrdrr\brdrs\brdrw5\brdrcf4 \trbrdrb\brdrs\brdrw5\brdrcf4 \trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clcbpat11\clbrdrl\brdrw5\brdrs\brdrcf4\clbrdrt\brdrw15\brdrs\brdrcf4\clbrdrr\brdrw15\brdrs\brdrcf4\clbrdrb\brdrw5\brdrs\brdrcf4 \cellx4843\clbrdrl\brdrw15\brdrs\brdrcf4\clbrdrt\brdrw15\brdrs\brdrcf4\clbrdrr\brdrw5\brdrs\brdrcf4\clbrdrb\brdrw5\brdrs\brdrcf4 \cellx9658 
+\pard\intbl\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\qc Abdelrahman Mohamed Sayed Ahmed\cell\b0 20190317\cell\row\trowd\trgaph10\trleft28\trrh333\trbrdrl\brdrs\brdrw5\brdrcf4 \trbrdrt\brdrs\brdrw5\brdrcf4 \trbrdrr\brdrs\brdrw5\brdrcf4 \trbrdrb\brdrs\brdrw5\brdrcf4 \trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clcbpat11\clbrdrl\brdrw5\brdrs\brdrcf4\clbrdrt\brdrw5\brdrs\brdrcf4\clbrdrr\brdrw15\brdrs\brdrcf4\clbrdrb\brdrw5\brdrs\brdrcf4 \cellx4843\clcbpat12\clbrdrl\brdrw15\brdrs\brdrcf4\clbrdrt\brdrw5\brdrs\brdrcf4\clbrdrr\brdrw5\brdrs\brdrcf4\clbrdrb\brdrw5\brdrs\brdrcf4 \cellx9658 
+\pard\intbl\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\qc\b Ziad AhmedAwad\cell\b0 20190216\cell\row\trowd\trgaph10\trleft28\trrh333\trbrdrl\brdrs\brdrw5\brdrcf4 \trbrdrt\brdrs\brdrw5\brdrcf4 \trbrdrr\brdrs\brdrw5\brdrcf4 \trbrdrb\brdrs\brdrw5\brdrcf4 \trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clcbpat11\clbrdrl\brdrw5\brdrs\brdrcf4\clbrdrt\brdrw5\brdrs\brdrcf4\clbrdrr\brdrw15\brdrs\brdrcf4\clbrdrb\brdrw5\brdrs\brdrcf4 \cellx4843\clcbpat12\clbrdrl\brdrw15\brdrs\brdrcf4\clbrdrt\brdrw5\brdrs\brdrcf4\clbrdrr\brdrw5\brdrs\brdrcf4\clbrdrb\brdrw5\brdrs\brdrcf4 \cellx9658 
+\pard\intbl\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\qc\b Sayed Mostafa Elsayed\cell\b0 20190107\cell\row 
+\pard\keep\keepn\noline\hyphpar0\widctlpar\s2\fi-436\li436\sl240\slmult1\b\fs40\lang1036\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+
+\pard\sa200\sl276\slmult1\cf0\ul\fs36\lang9 Introduction:\par
+\cf4\ulnone\b0\fs24\lang1033 The Ant Colony Optimization (ACO) algorithm is a meta-heuristic approach inspired by the foraging behavior of ants. It is commonly used to solve combinatorial optimization problems, such as the Traveling Salesman Problem (TSP). In the TSP, the objective is to find the shortest possible route that visits a set of cities exactly once and returns to the starting city.\par
+\cf0\charscalex0\fs22\lang9\par
+\ul\b\fs36 Our Work:\par
+\ulnone\b0\fs24 The implementation of Ant Colony Optimization (ACO) algorithm to solve the Traveling Salesman Problem (TSP) for a given number of cities and ants. The ACO algorithm is a metaheuristic optimization method inspired by the behavior of ants seeking food. The algorithm works by simulating the behavior of ants that deposit pheromones on their paths, and these pheromones attract other ants to follow the same path. The pheromone trails are updated iteratively based on the quality of the solutions found by the ants.\par
+The AntColonyOptimization class initializes the necessary parameters for the ACO algorithm, such as the number of cities, ants, and iterations. The generate_distances function generates a random distance matrix for the given number of cities. The run function is the main loop of the algorithm, which generates ant paths, updates the pheromone map, and keeps track of the best path and distance found so far. The generate_ant_paths function generates a set of ant paths based on the current pheromone map. The choose_next_city function selects the next city to visit based on the pheromone and heuristic information. The update_pheromone_map function updates the pheromone map based on the ant paths found. The update_best_path function updates the best path and distance found so far based on the ant paths generated in the current iteration. The calculate_distance function calculates the distance of a given path based on the distance matrix.\par
+The code then runs the ACO algorithm for a set of 10, 20 and 30 cities with different numbers of ant agents using a loop. For each run, it initializes an instance of the AntColonyOptimization class with the given parameters and runs the algorithm by calling the run method. Finally, it prints the distances between all cities and the best distance found and the best path for each run.\par
+\ul\b\fs36 Results:\par
+\ulnone\b0\fs24 Our output is printing:\par
+1- Number of ants.\par
+2- Number of cities.\par
+
+\pard\sl240\slmult1 3- Distances between all cities.\par
+\par
+
+\pard\sa200\sl276\slmult1 4- Best distance in each five iterations.\par
+5- Best path that have minimum distance.\par
+6- Best distance overall (minimum distance).\par
+\cf5\b When we test the code on with phermone decay= 0.2 and number of ants= [1, 5, 10, 15, 20, 25, 30], number of cities= 10, number of iteration = 50 and we take best distance of each 5 iterations then take the minimum of all iterations as a overall best distance.\par
+
+\pard\sl240\slmult1\cf2 When number of ants = 1 ant  and number of cities=  10 cities:\par
+\cf6 Distances between 10 cities:\par
+[[47 50  3  6  6 42 12 22 24 39]\par
+ [26  9 27 27 15  4 41 42 26 49]\par
+ [27 20 40 28 16 11 12 23 19  8]\par
+ [18 50  3 21 38 27 32 22 22 17]\par
+ [42 35  4 12 35 34 13 26 38 14]\par
+ [31 37  3  3 39  8 41 43 20 18]\par
+ [ 7 44 45 34  4  4 42 44 38 41]\par
+ [14 49 21 30  3 17 38 15 45 23]\par
+ [14  7  9  7 50  6 15 39 43 17]\par
+ [18 23 38 26 18 16 24  8 44 38]]\par
+\cf7 Iteration 5: Best distance = 205\par
+Iteration 10: Best distance = 205\par
+Iteration 15: Best distance = 97\par
+Iteration 20: Best distance = 97\par
+Iteration 25: Best distance = 97\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [0 8 1 5 3 2 9 7 4 6 0]\par
+Best distance: 80\par
+\cf0\b0\par
+\cf2\b When number of ants = 5 ant  and number of cities=  10 cities:\par
+\cf7 Iteration 5: Best distance = 80\par
+Iteration 10: Best distance = 80\par
+Iteration 15: Best distance = 80\par
+Iteration 20: Best distance = 80\par
+Iteration 25: Best distance = 80\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [8 1 5 3 2 9 7 4 6 0 8]\par
+Best distance: 80\par
+\cf0\b0\par
+\cf2\b When number of ants = 10 ant  and number of cities=  10 cities:\par
+\cf7 Iteration 5: Best distance = 80\par
+Iteration 10: Best distance = 80\par
+Iteration 15: Best distance = 80\par
+Iteration 20: Best distance = 80\par
+Iteration 25: Best distance = 80\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [1 5 3 2 9 7 4 6 0 8 1]\par
+Best distance: 80\par
+\cf0\b0\par
+\cf2\b When number of ants = 15 ant  and number of cities=  10 cities:\par
+\cf7 Iteration 5: Best distance = 80\par
+Iteration 10: Best distance = 80\par
+Iteration 15: Best distance = 80\par
+Iteration 20: Best distance = 80\par
+Iteration 25: Best distance = 80\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [1 5 3 2 9 7 4 6 0 8 1]\par
+Best distance: 80\par
+\cf0\b0\par
+\cf2\b When number of ants = 20 ant  and number of cities=  10 cities:\par
+\cf7 Iteration 5: Best distance = 80\par
+Iteration 10: Best distance = 80\par
+Iteration 15: Best distance = 80\par
+Iteration 20: Best distance = 80\par
+Iteration 25: Best distance = 80\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [1 5 3 2 9 7 4 6 0 8 1]\par
+Best distance: 80\par
+\cf0\b0\par
+\cf2\b When number of ants = 25 ant  and number of cities=  10 cities:\par
+\cf7 Iteration 5: Best distance = 80\par
+Iteration 10: Best distance = 80\par
+Iteration 15: Best distance = 80\par
+Iteration 20: Best distance = 80\par
+Iteration 25: Best distance = 80\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [1 5 3 2 9 7 4 6 0 8 1]\par
+Best distance: 80\par
+\cf0\b0\par
+\cf2\b When number of ants = 30 ant  and number of cities=  10 cities:\par
+\cf7 Iteration 5: Best distance = 80\par
+Iteration 10: Best distance = 80\par
+Iteration 15: Best distance = 80\par
+Iteration 20: Best distance = 80\par
+Iteration 25: Best distance = 80\par
+Iteration 30: Best distance = 80\par
+Iteration 35: Best distance = 80\par
+Iteration 40: Best distance = 80\par
+Iteration 45: Best distance = 80\par
+Iteration 50: Best distance = 80\par
+\cf3 Best path: [8 1 5 3 2 9 7 4 6 0 8]\par
+Best distance: 80\par
+
+\pard\sa200\sl276\slmult1\cf0\b0\par
+\cf5\b When we test the code on with phermone decay= 0.2 and number of ants= [1, 5, 10, 15, 20, 25, 30], number of cities= 20, number of iteration = 50 and we take best distance of each 5 iterations then take the minimum of all iterations as a overall best distance.\cf0\b0\par
+
+\pard\sl240\slmult1\cf2\b When number of ants = 1 ant  and number of cities=  20 cities:\par
+\cf6 Distances between 20 cities:\par
+[[47 50  3  6  6 42 12 22 24 39 26  9 27 27 15  4 41 42 26 49]\par
+ [27 20 40 28 16 11 12 23 19  8 18 50  3 21 38 27 32 22 22 17]\par
+ [42 35  4 12 35 34 13 26 38 14 31 37  3  3 39  8 41 43 20 18]\par
+ [ 7 44 45 34  4  4 42 44 38 41 14 49 21 30  3 17 38 15 45 23]\par
+ [14  7  9  7 50  6 15 39 43 17 18 23 38 26 18 16 24  8 44 38]\par
+ [ 3 34  8 33  3 39 37 32  6 37 45 16 42 24 12  3 13 46 26  5]\par
+ [37 38 33  6 21 49 38 23 20 30 17 44  4 39 13 25 46 43 14  5]\par
+ [19 35  3 41 22 49 45 43 16 33 27  5  6 33 37 46 16 43 11 22]\par
+ [34 11 29  5  6 47 17 35  7  6 48 14 25 16 48 14 19 27 32 24]\par
+ [49 28 19 22 36 43 35 39  9 24 34 16 10 27 18 44 21 43 18 14]\par
+ [41 50 32  4 34 47 27 27  6 21 50  6 45 15 41 38 25  8 26 46]\par
+ [35 14 43 23 13 46 40 31 50 43  5 30 22 28 26 49 23 32  6 38]\par
+ [42 12 12 44 26  6 49 29 47  6 34 12 13 30 48 10 42 24 36 47]\par
+ [37 37 27 36  8 43 39  3 14 37  8 19 11  4 20 38 30 43 39 28]\par
+ [ 6 42 38 33 32 36 21 20 32 23  5  8 40 15 47  5 50 30 24 42]\par
+ [42 14 25 33 20  9 10 21 31 46 22 44 32 49 24 12 28 35 30 12]\par
+ [31 46 20 44  3 25 19 45 39 33 27  6 11 30 32 49 26 35 22 11]\par
+ [10 26 16 20  3 14 31 39 28 35 45 17 25 31 23 21  7 25 38 22]\par
+ [10 11 16  8  3 11 18 18 14  7 42 31 48 29 13 49 30 38 44 21]\par
+ [37 33 46 21 48 26  4  9 45 33 19 29 38 45 12 47 16  9 41 42]]\par
+\cf7 Iteration 5: Best distance = 259\par
+Iteration 10: Best distance = 240\par
+Iteration 15: Best distance = 240\par
+Iteration 20: Best distance = 188\par
+Iteration 25: Best distance = 188\par
+Iteration 30: Best distance = 188\par
+Iteration 35: Best distance = 159\par
+Iteration 40: Best distance = 159\par
+Iteration 45: Best distance = 159\par
+Iteration 50: Best distance = 159\par
+\cf3 Best path: [17  4  5 15  6 19 10  3 14  0  2 13  7 11 18  9  8 16 12  1 17]\par
+Best distance: 159\par
+\cf0\b0\par
+\cf2\b When number of ants = 5 ant  and number of cities=  20 cities:\par
+\cf7 Iteration 5: Best distance = 244\par
+Iteration 10: Best distance = 158\par
+Iteration 15: Best distance = 151\par
+Iteration 20: Best distance = 138\par
+Iteration 25: Best distance = 138\par
+Iteration 30: Best distance = 138\par
+Iteration 35: Best distance = 129\par
+Iteration 40: Best distance = 129\par
+Iteration 45: Best distance = 129\par
+Iteration 50: Best distance = 129\par
+\cf3 Best path: [ 8  3 14 15  6 19 17 16  4  5  0  2 13  7 11 18  9 12  1 10  8]\par
+Best distance: 129\par
+\cf0\b0\par
+\cf2\b When number of ants = 10 ant  and number of cities=  20 cities:\par
+\cf7 Iteration 5: Best distance = 156\par
+Iteration 10: Best distance = 124\par
+Iteration 15: Best distance = 124\par
+Iteration 20: Best distance = 124\par
+Iteration 25: Best distance = 124\par
+Iteration 30: Best distance = 124\par
+Iteration 35: Best distance = 124\par
+Iteration 40: Best distance = 124\par
+Iteration 45: Best distance = 124\par
+Iteration 50: Best distance = 124\par
+\cf3 Best path: [ 9  8  3 14 15 19  6 12  5  0  2 13  7 11 10 17 16  4  1 18  9]\par
+Best distance: 124\par
+\cf0\b0\par
+\cf2\b When number of ants = 15 ant  and number of cities=  20 cities:\par
+\cf7 Iteration 5: Best distance = 140\par
+Iteration 10: Best distance = 122\par
+Iteration 15: Best distance = 122\par
+Iteration 20: Best distance = 122\par
+Iteration 25: Best distance = 122\par
+Iteration 30: Best distance = 122\par
+Iteration 35: Best distance = 122\par
+Iteration 40: Best distance = 122\par
+Iteration 45: Best distance = 122\par
+Iteration 50: Best distance = 122\par
+\cf3 Best path: [11 10  3 14 15  6 19 17 16  4  5  0  2 13  7 18  9  8  1 12 11]\par
+Best distance: 122\par
+\cf0\b0\par
+\cf2\b When number of ants = 20 ant  and number of cities=  20 cities:\par
+\cf7 Iteration 5: Best distance = 137\par
+Iteration 10: Best distance = 137\par
+Iteration 15: Best distance = 137\par
+Iteration 20: Best distance = 136\par
+Iteration 25: Best distance = 136\par
+Iteration 30: Best distance = 129\par
+Iteration 35: Best distance = 129\par
+Iteration 40: Best distance = 129\par
+Iteration 45: Best distance = 129\par
+Iteration 50: Best distance = 129\par
+\cf3 Best path: [18  4  5  0  2 13  7 11 10 17 16 19  6 12  9  8  3 14 15  1 18]\par
+Best distance: 129\par
+\cf0\b0\par
+\cf2\b When number of ants = 25 ant  and number of cities=  20 cities:\par
+\cf7 Iteration 5: Best distance = 135\par
+Iteration 10: Best distance = 133\par
+Iteration 15: Best distance = 129\par
+Iteration 20: Best distance = 129\par
+Iteration 25: Best distance = 129\par
+Iteration 30: Best distance = 128\par
+Iteration 35: Best distance = 128\par
+Iteration 40: Best distance = 128\par
+Iteration 45: Best distance = 128\par
+Iteration 50: Best distance = 128\par
+\cf3 Best path: [ 1 12  9  8  4  5  0  2 13  7 11 10  3 14 15  6 19 17 16 18  1]\par
+Best distance: 128\par
+\cf0\b0\par
+\cf2\b When number of ants = 30 ant  and number of cities=  20 cities:\par
+\cf7 Iteration 5: Best distance = 127\par
+Iteration 10: Best distance = 122\par
+Iteration 15: Best distance = 122\par
+Iteration 20: Best distance = 122\par
+Iteration 25: Best distance = 122\par
+Iteration 30: Best distance = 122\par
+Iteration 35: Best distance = 122\par
+Iteration 40: Best distance = 122\par
+Iteration 45: Best distance = 122\par
+Iteration 50: Best distance = 122\par
+\cf3 Best path: [16  4  5  0  2 13  7 11 18  1 12  9  8  3 14 15 19  6 10 17 16]\par
+Best distance: 122\par
+\cf0\b0\par
+
+\pard\sa200\sl276\slmult1\cf5\b When we test the code on with phermone decay= 0.2 and number of ants= [1, 5, 10, 15, 20, 25, 30], number of cities= 30, number of iteration = 50 and we take best distance of each 5 iterations then take the minimum of all iterations as a overall best distance.\par
+
+\pard\sl240\slmult1\cf2 When number of ants = 1 ant  and number of cities=  30 cities:\par
+\cf6 Distances between 30 cities:\par
+[[47 50  3  6  6 42 12 22 24 39 26  9 27 27 15  4 41 42 26 49 27 20 40 28\par
+  16 11 12 23 19  8]\par
+ [18 50  3 21 38 27 32 22 22 17 42 35  4 12 35 34 13 26 38 14 31 37  3  3\par
+  39  8 41 43 20 18]\par
+ [ 7 44 45 34  4  4 42 44 38 41 14 49 21 30  3 17 38 15 45 23 14  7  9  7\par
+  50  6 15 39 43 17]\par
+ [18 23 38 26 18 16 24  8 44 38  3 34  8 33  3 39 37 32  6 37 45 16 42 24\par
+  12  3 13 46 26  5]\par
+ [37 38 33  6 21 49 38 23 20 30 17 44  4 39 13 25 46 43 14  5 19 35  3 41\par
+  22 49 45 43 16 33]\par
+ [27  5  6 33 37 46 16 43 11 22 34 11 29  5  6 47 17 35  7  6 48 14 25 16\par
+  48 14 19 27 32 24]\par
+ [49 28 19 22 36 43 35 39  9 24 34 16 10 27 18 44 21 43 18 14 41 50 32  4\par
+  34 47 27 27  6 21]\par
+ [50  6 45 15 41 38 25  8 26 46 35 14 43 23 13 46 40 31 50 43  5 30 22 28\par
+  26 49 23 32  6 38]\par
+ [42 12 12 44 26  6 49 29 47  6 34 12 13 30 48 10 42 24 36 47 37 37 27 36\par
+   8 43 39  3 14 37]\par
+ [ 8 19 11  4 20 38 30 43 39 28  6 42 38 33 32 36 21 20 32 23  5  8 40 15\par
+  47  5 50 30 24 42]\par
+ [42 14 25 33 20  9 10 21 31 46 22 44 32 49 24 12 28 35 30 12 31 46 20 44\par
+   3 25 19 45 39 33]\par
+ [27  6 11 30 32 49 26 35 22 11 10 26 16 20  3 14 31 39 28 35 45 17 25 31\par
+  23 21  7 25 38 22]\par
+ [10 11 16  8  3 11 18 18 14  7 42 31 48 29 13 49 30 38 44 21 37 33 46 21\par
+  48 26  4  9 45 33]\par
+ [19 29 38 45 12 47 16  9 41 42 11 16 10 19 25 18 28 11 38  9 20 10 23 28\par
+   5 19 48 26 27  7]\par
+ [39 47 26 33 28 23 36 40 26 30 32 36 25 10 44 12  3 22 39 20 23  6 45  4\par
+  23 39  7 19 50 13]\par
+ [48 43 33 30 46 34 23  9 12 30 50 38 22 15 21 13 37 36 46  6 15 39  4  3\par
+  42 27 39 38  8  9]\par
+ [ 6 37 43 36 31  7 29 35 48 12  8 36 10 33 11 23 10  6 24 30 47  6 41 23\par
+  10 22 34  3  8 30]\par
+ [46 33 12 22 10 24 40 31 11 46 49  3 43 41 28 13 37 26 35 22 29 17 35  9\par
+  36 47 48 44  7 32]\par
+ [30 20 38  5 23 48 18 39 44  7 16 33 48 26 37 38 12 29 29 25 15 18 37 29\par
+  41 49 19 50 43  3]\par
+ [13 14 16 10 33  9 48 33 18 44 41 46 21 10 31  4 44  5 31 17 40 30 39 34\par
+  32 49 32 36 15 35]\par
+ [44 19  5 11 13 29 30  4  3  8 27 37 18  6 49 40 46 22 27  9 23  9 31  9\par
+   5 31 31 41 40  8]\par
+ [48 12 39 16 24 34 20 38 48 11 28 24 48 40 25 19 28 49 40  4  8  9 15 29\par
+  13 17 11 10 48  8]\par
+ [50 45  6 13 30 28  6 17 21  8  7 20  8 33 27  6  8 43 39 27 36 21 36 17\par
+  10 46 49 36 20 32]\par
+[15 49 35 37 26 28 49 46 44 49  3 15 12 21  7 10  6 15 40 48 48 21 10 29\par
+  49 32  6 13 23 45]\par
+ [ 4 23 19 45 31 29 26  5 41 12  5 47 44 28 39 29  7 44 13 15 43 36 40 42\par
+  35 36 29 38 28 27]\par
+ [21 23 33 31 11 21 28 27 42 45 31 27 21  6 47 22 48  3 13  6  9 30 38  9\par
+  22 37 41 23 46  3]\par
+ [39 48 44  5 36 15 18 36 26 15  8 41  4 13  9  9 41 41 14 24  5 15 32 12\par
+  11  8 46  4 46 18]\par
+ [15 50 15 24 21 28 16 33 31 47 44 24  9 39 43 29 33  8 18 40 40 34 35 19\par
+  35 13 15 32  3 32]\par
+ [29 42 25 22  8 39 22 39  8 31 15 29 22 15 41 10 19 32  3 26 18 13  6  6\par
+  19 12 23 40 20 12]\par
+ [47 18 41 17 36  7 19 39 10 26 30 49 10 25 37 33 19 30 50 50 14 26 17 42\par
+  33 29 37 20 38 10]]\par
+\cf7 Iteration 5: Best distance = 593\par
+Iteration 10: Best distance = 349\par
+Iteration 15: Best distance = 349\par
+Iteration 20: Best distance = 290\par
+Iteration 25: Best distance = 232\par
+Iteration 30: Best distance = 232\par
+Iteration 35: Best distance = 232\par
+Iteration 40: Best distance = 228\par
+Iteration 45: Best distance = 228\par
+Iteration 50: Best distance = 228\par
+\par
+\cf3 Best path: [29 20  7 28 23 10 24  0 15  8  9  3 26 18 22  6 12  4 19 17 11 14 16 27\par
+  2  5 13 21  1 25 29]\par
+Best distance: 228\par
+\cf0\b0\par
+\cf2\b When number of ants = 5 ant  and number of cities=  30 cities:\par
+\cf7 Iteration 5: Best distance = 268\par
+Iteration 10: Best distance = 185\par
+Iteration 15: Best distance = 154\par
+Iteration 20: Best distance = 145\par
+Iteration 25: Best distance = 145\par
+Iteration 30: Best distance = 145\par
+Iteration 35: Best distance = 145\par
+Iteration 40: Best distance = 145\par
+Iteration 45: Best distance = 145\par
+Iteration 50: Best distance = 145\par
+\cf3 Best path: [23 10 24  0  2 14 16 27 28 18 29  5 13 21 19 15 22  6  8  9  3 25 17 11\par
+ 26 12  4 20  7  1 23]\par
+Best distance: 145\par
+\cf0\b0\par
+\cf2\b When number of ants = 10 ant  and number of cities=  30 cities:\par
+\cf7 Iteration 5: Best distance = 240\par
+Iteration 10: Best distance = 178\par
+Iteration 15: Best distance = 171\par
+Iteration 20: Best distance = 171\par
+Iteration 25: Best distance = 141\par
+Iteration 30: Best distance = 141\par
+Iteration 35: Best distance = 141\par
+Iteration 40: Best distance = 139\par
+Iteration 45: Best distance = 139\par
+Iteration 50: Best distance = 139\par
+\cf3 Best path: [17 11 26 12  4 22  6 23 10 24  7 20  8 27 28 18 29  5  1  2 14 16  0 15\par
+ 19 13 21  9  3 25 17]\par
+Best distance: 139\par
+\cf0\b0\par
+\cf2\b When number of ants = 15 ant  and number of cities=  30 cities:\par
+\cf7 Iteration 5: Best distance = 170\par
+Iteration 10: Best distance = 147\par
+Iteration 15: Best distance = 147\par
+Iteration 20: Best distance = 147\par
+Iteration 25: Best distance = 147\par
+Iteration 30: Best distance = 147\par
+Iteration 35: Best distance = 147\par
+Iteration 40: Best distance = 147\par
+Iteration 45: Best distance = 147\par
+Iteration 50: Best distance = 147\par
+\cf3 Best path: [25 17 11 14 16 27 28 18 29  5 13  7  1 22  6 23 10 24  0  2  4 12 26  3\par
+ 21 19 15 20  8  9 25]\par
+Best distance: 147\par
+\cf0\b0\par
+\cf2\b When number of ants = 20 ant  and number of cities=  30 cities:\par
+\cf7 Iteration 5: Best distance = 160\par
+Iteration 10: Best distance = 152\par
+Iteration 15: Best distance = 132\par
+Iteration 20: Best distance = 132\par
+Iteration 25: Best distance = 132\par
+Iteration 30: Best distance = 132\par
+Iteration 35: Best distance = 132\par
+Iteration 40: Best distance = 132\par
+Iteration 45: Best distance = 132\par
+Iteration 50: Best distance = 132\par
+\cf3 Best path: [15 23 10 24  0  2  4 22  6  8  9  3 25 17 11 14 16 27 28 18 29  5 13  7\par
+  1 12 26 20 21 19 15]\par
+Best distance: 132\par
+\cf0\b0\par
+\cf2\b When number of ants = 25 ant  and number of cities=  30 cities:\par
+\cf7 Iteration 5: Best distance = 141\par
+Iteration 10: Best distance = 141\par
+Iteration 15: Best distance = 141\par
+Iteration 20: Best distance = 141\par
+Iteration 25: Best distance = 141\par
+Iteration 30: Best distance = 141\par
+Iteration 35: Best distance = 141\par
+Iteration 40: Best distance = 141\par
+Iteration 45: Best distance = 141\par
+Iteration 50: Best distance = 141\par
+\cf3 Best path: [21 19 17 11 14 16 27 28 18 29  5  1  2  4 22  6 23 10 24  0 15  7 20  8\par
+  9  3 25 13 12 26 21]\par
+Best distance: 141\par
+\cf0\b0\par
+\cf2\b When number of ants = 30 ant  and number of cities=  30 cities:\par
+\cf7 Iteration 5: Best distance = 159\par
+Iteration 10: Best distance = 146\par
+Iteration 15: Best distance = 134\par
+Iteration 20: Best distance = 134\par
+Iteration 25: Best distance = 134\par
+Iteration 30: Best distance = 134\par
+Iteration 35: Best distance = 134\par
+Iteration 40: Best distance = 134\par
+Iteration 45: Best distance = 134\par
+Iteration 50: Best distance = 134\par
+\cf3 Best path: [26 20  7  1 12  4 22  6 23 10 24  0  2 14 16 27 28 18 29  5 13 21 19 15\par
+  8  9  3 25 17 11 26]\par
+Best distance: 134\par
+
+\pard\sa200\sl276\slmult1\cf0\b0\par
+\ul\b\fs36 Relationship between number of cities, number of ants and the best distance:\par
+\cf5\ulnone\fs24 At 10 cities, \cf0\b0 increasing number of ants don't affect on the best path as it still best distance =\cf2\b 80\cf0\b0 .\par
+\cf5\b At 20 cities, \cf0\b0 increasing number of ants affect on the best path as the best distance in the first 5 iterations = \cf2\b 159\cf0\b0 , then reduced to \cf2\b 129 \cf0\b0 in the second 5 iteration and still decreased till reached minmum that equals to \cf2\b 122\cf0\b0 .\par
+\cf5\b At 30 cities, \cf0\b0 increasing number of ants affect on the best path as the best distance in the first 5 iterations = \cf2\b 228\cf0\b0 , then reduced to \cf2\b 145 \cf0\b0 in the second 5 iteration and still decreased till reached minmum that equals to \cf2\b 132\cf0\b0 .\par
+\par
+\ul\b\fs36 Conclusion:\par
+
+\pard\keep\keepn\noline\hyphpar0\widctlpar\sl240\slmult1\cf4\charscalex100\ulnone\b0\fs24\lang1033 Overall, the ACO algorithm provides a viable approach for solving the TSP, but its performance may vary based on the problem's complexity and the number of cities involved.\par
+
+\pard\sa200\sl276\slmult1\cf0\charscalex0\lang9\par
+\par
+}
+ 
